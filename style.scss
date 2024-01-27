@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin gridCenter {
+  display: grid;
+  place-items: center;
+}
+
+body {
+  // @include flexCenter();
+  @include gridCenter();
+}
+
+input {
+  font-size: 32px;
+}
+
+span {
+  display: block;
+  text-align: center;
+  border: 1px solid;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.1s;
+}
+
+span:active {
+  background-color: black;
+  color: white;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  width: 10rem;
+  text-align: center;
+}
